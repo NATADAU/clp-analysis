@@ -628,7 +628,9 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
   <p class="slead">Поделитесь впечатлениями от анализа — что важно, что удивило, что хотите изменить в первую очередь.</p>
 
   <div id="form-wrap" style="max-width:680px;">
-    <form id="fbForm" action="https://formspree.io/f/mreojvnw" method="POST" style="display:grid;gap:20px;">
+    <form id="fbForm" action="https://api.web3forms.com/submit" method="POST" style="display:grid;gap:20px;">
+      <input type="hidden" name="access_key" value="12aff186-e328-473a-80b8-cd0db6fa871f">
+      <input type="hidden" name="subject" value="Обратная связь — Анализ ЦЛП 2025/2026">
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <div>
@@ -720,7 +722,7 @@ document.getElementById('fbForm').addEventListener('submit', async function(e) {
   btn.disabled = true;
   try {
     const resp = await fetch(this.action, { method:'POST', body: new FormData(this), headers:{'Accept':'application/json'} });
-    if (resp.ok) {
+    const json = await resp.json(); if (json.success) {
       document.getElementById('form-wrap').style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
     } else {
