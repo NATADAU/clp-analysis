@@ -157,20 +157,20 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
 <nav>
 <div class="nav-inner">
   <a href="#hero" class="nav-logo">ЦЛП · Анализ 25/26</a>
-  <button class="burger" onclick="toggleMenu(event)" aria-label="Меню">
+  <button class="burger" id="burgerBtn" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="navLinks">
-    <a href="#funnel" onclick="closeMenu()">Воронка</a>
-    <a href="#flow" onclick="closeMenu()">Поток</a>
-    <a href="#types" onclick="closeMenu()">Типы</a>
-    <a href="#specialists" onclick="closeMenu()">Специалисты</a>
-    <a href="#days" onclick="closeMenu()">Дни</a>
-    <a href="#platforms" onclick="closeMenu()">Площадки</a>
-    <a href="#cancellations" onclick="closeMenu()">Отмены</a>
-    <a href="#issues" onclick="closeMenu()">Проблемы</a>
-    <a href="#conclusions" onclick="closeMenu()">Выводы</a>
-    <a href="#feedback" onclick="closeMenu()">Обратная связь</a>
+    <a href="#funnel">Воронка</a>
+    <a href="#flow">Поток</a>
+    <a href="#types">Типы</a>
+    <a href="#specialists">Специалисты</a>
+    <a href="#days">Дни</a>
+    <a href="#platforms">Площадки</a>
+    <a href="#cancellations">Отмены</a>
+    <a href="#issues">Проблемы</a>
+    <a href="#conclusions">Выводы</a>
+    <a href="#feedback">Обратная связь</a>
   </div>
 </div>
 </nav>
@@ -1751,20 +1751,37 @@ specs.forEach(([n,p,c,t,pd,r,pr])=>{
 </script>
 
 <script>
-function toggleMenu(e) {
-  e.stopPropagation();
-  const links = document.getElementById('navLinks');
-  const btn = document.querySelector('.burger');
-  links.classList.toggle('open');
-  btn.classList.toggle('open');
-}
-function closeMenu() {
-  document.getElementById('navLinks').classList.remove('open');
-  document.querySelector('.burger').classList.remove('open');
-}
-document.addEventListener('click', function(e) {
-  const nav = document.querySelector('nav');
-  if (!nav.contains(e.target)) closeMenu();
+document.addEventListener('DOMContentLoaded', function() {
+  var burger = document.getElementById('burgerBtn');
+  var menu = document.getElementById('navLinks');
+
+  burger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = menu.classList.contains('open');
+    if (isOpen) {
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+    } else {
+      menu.classList.add('open');
+      burger.classList.add('open');
+    }
+  });
+
+  // Клик по ссылке — закрыть меню
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  });
+
+  // Клик вне меню — закрыть
+  document.addEventListener('click', function(e) {
+    if (!document.querySelector('nav').contains(e.target)) {
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+    }
+  });
 });
 </script>
 </body>
