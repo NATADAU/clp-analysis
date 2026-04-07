@@ -1747,6 +1747,7 @@ specs.forEach(([n,p,c,t,pd,r,pr])=>{
   body.innerHTML+=`<tr><td style="font-weight:600;">${n}</td><td style="color:var(--ink2);">${p}</td><td style="color:var(--ink2);">${c}</td><td><div class="bwrap"><span style="min-width:28px;">${t}</span><div class="bbg"><div class="bfill" style="width:${bw}%;"></div></div></div></td><td>${pd} <span style="font-size:11px;color:var(--ink3);">(${pct}%)</span></td><td style="font-weight:600;">${r>0?(r/1000).toFixed(0)+'к ₽':'—'}</td><td><span class="pb ${pc}">${pl}</span></td></tr>`;
 });
 
+}); // закрытие window.addEventListener("load", ...)
 </script>
 
 <script>
