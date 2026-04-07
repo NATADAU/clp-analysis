@@ -27,7 +27,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop
 .nav-links a{font-size:12px;font-weight:600;color:var(--ink2);text-decoration:none;padding:5px 10px;border-radius:20px;transition:background 0.15s,color 0.15s;white-space:nowrap;}
 .nav-links a:hover{background:var(--blue20);color:var(--blue100);}
 
-.hero{background:var(--blue100);color:#fff;padding:80px 24px 72px;position:relative;overflow:hidden;}
+.hero{background:var(--ink);color:#fff;padding:80px 24px 72px;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:-60px;right:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(1,155,171,0.3) 0%,transparent 70%);pointer-events:none;}
 .hero-inner{max-width:1100px;margin:0 auto;position:relative;}
 .hero-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue80);border:1px solid rgba(91,190,201,0.4);border-radius:20px;padding:4px 14px;margin-bottom:20px;}
@@ -147,7 +147,6 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
     <a href="#cancellations">Отмены</a>
     <a href="#issues">Проблемы</a>
     <a href="#conclusions">Выводы</a>
-    <a href="#feedback">Обратная связь</a>
   </div>
 </div>
 </nav>
@@ -166,217 +165,124 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
 </div>
 </div>
 
+<!-- FLOW -->
 <!-- FUNNEL -->
 <section id="funnel">
 <div class="si">
   <div class="eyebrow">С чего начать</div>
   <h2 class="stitle">Путь ребёнка в ЦЛП</h2>
-  <p class="slead">Чтобы понять данные — важно сначала увидеть систему целиком. Вот как устроен путь от первого обращения до регулярных занятий.</p>
-
+  <p class="slead">Чтобы понять данные — важно сначала увидеть систему целиком. Как устроен путь от первого обращения до регулярных занятий.</p>
   <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:24px;overflow-x:auto;">
-    <svg width="100%" viewBox="0 0 680 720" style="min-width:320px;">
+    <svg width="100%" viewBox="0 0 780 540" style="min-width:340px;">
       <defs>
         <marker id="farr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </marker>
       </defs>
 
-      <!-- Заголовки входов -->
-      <text font-family="Montserrat,sans-serif" font-size="11" font-weight="700" x="185" y="16" text-anchor="middle" fill="#019BAB" letter-spacing="1">БЕСПЛАТНЫЙ ПП</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" font-weight="700" x="495" y="16" text-anchor="middle" fill="#E5004F" letter-spacing="1">ПЛАТНЫЙ ПП</text>
+      <!-- НОВЫЙ РЕБЁНОК -->
+      <rect x="240" y="16" width="200" height="44" rx="10" fill="#C7E9ED" stroke="#019BAB" stroke-width="1"/>
+      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="340" y="38" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">Новый ребёнок</text>
 
-      <!-- Вход 1: Новый ребёнок → бесплатный ПП -->
-      <rect x="80" y="24" width="210" height="52" rx="10" fill="#C7E9ED" stroke="#019BAB" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="185" y="44" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">Новый ребёнок</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="185" y="63" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">бесплатный ПП · 588 приёмов</text>
+      <!-- Стрелки от нового ребёнка -->
+      <line x1="295" y1="60" x2="195" y2="94" stroke="#019BAB" stroke-width="1.5" marker-end="url(#farr)"/>
+      <line x1="400" y1="60" x2="525" y2="94" stroke="#E5004F" stroke-width="1.5" marker-end="url(#farr)"/>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="218" y="82" text-anchor="middle" fill="#0C6B78">бесплатно</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="500" y="82" text-anchor="middle" fill="#E5004F">платно</text>
 
-      <!-- Вход 2: Новый ребёнок → платный ПП -->
-      <rect x="390" y="24" width="210" height="52" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="495" y="44" text-anchor="middle" dominant-baseline="central" fill="#72243E">Новый ребёнок</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="495" y="63" text-anchor="middle" dominant-baseline="central" fill="#993556">платный ПП · 49 приёмов</text>
+      <!-- ПП бесплатный -->
+      <rect x="80" y="94" width="230" height="44" rx="10" fill="#C7E9ED" stroke="#019BAB" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="195" y="110" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">Первичный приём</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="195" y="127" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">588 приёмов · бесплатно</text>
 
-      <!-- Стрелки вниз -->
-      <line x1="185" y1="76" x2="185" y2="108" stroke="#019BAB" stroke-width="1.5" marker-end="url(#farr)"/>
-      <line x1="495" y1="76" x2="495" y2="108" stroke="#E5004F" stroke-width="1.5" marker-end="url(#farr)"/>
+      <!-- Конс 1 платная -->
+      <rect x="410" y="94" width="230" height="44" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="525" y="110" text-anchor="middle" dominant-baseline="central" fill="#72243E">Консультация 1</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="525" y="127" text-anchor="middle" dominant-baseline="central" fill="#993556">Новиков / Портнова · 49 · платно</text>
 
-      <!-- Развилка 1: попал/не попал в группу -->
-      <rect x="80" y="108" width="210" height="52" rx="10" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="185" y="128" text-anchor="middle" dominant-baseline="central" fill="#791F1F">Очередь</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="185" y="147" text-anchor="middle" dominant-baseline="central" fill="#A32D2D">ожидание подходящей группы</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" font-weight="700" x="36" y="128" text-anchor="middle" fill="#A32D2D">УЗКОЕ</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" font-weight="700" x="36" y="141" text-anchor="middle" fill="#A32D2D">МЕСТО</text>
-      <line x1="58" y1="134" x2="78" y2="134" stroke="#E24B4A" stroke-width="1.5" marker-end="url(#farr)" fill="none"/>
+      <!-- Стрелки от ПП: три пути -->
+      <line x1="140" y1="138" x2="100" y2="172" stroke="#E24B4A" stroke-width="1.5" marker-end="url(#farr)"/>
+      <line x1="195" y1="138" x2="195" y2="172" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#farr)"/>
+      <line x1="250" y1="138" x2="295" y2="172" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#farr)"/>
+      <text font-family="Montserrat,sans-serif" font-size="10" x="82" y="160" text-anchor="middle" fill="#A32D2D">очередь</text>
+      <text font-family="Montserrat,sans-serif" font-size="10" x="195" y="160" text-anchor="middle" fill="#888">конс.</text>
+      <text font-family="Montserrat,sans-serif" font-size="10" x="315" y="160" text-anchor="middle" fill="#888">ушёл</text>
 
-      <!-- Право на 1 бесплатный ПП у психолога -->
-      <rect x="390" y="108" width="210" height="52" rx="10" fill="#C7E9ED" stroke="#019BAB" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="495" y="128" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">1 бесплатный ПП</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="495" y="147" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">у психолога ЦЛП · один раз</text>
+      <!-- Стрелки от Конс1 -->
+      <line x1="490" y1="138" x2="450" y2="172" stroke="#019BAB" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
+      <line x1="560" y1="138" x2="595" y2="172" stroke="#E5004F" stroke-width="1.2" marker-end="url(#farr)"/>
+      <text font-family="Montserrat,sans-serif" font-size="10" x="440" y="160" text-anchor="middle" fill="#019BAB">→ ПП</text>
+      <text font-family="Montserrat,sans-serif" font-size="10" x="612" y="160" text-anchor="middle" fill="#E5004F">повторно</text>
 
-      <!-- Стрелки от очереди -->
-      <line x1="140" y1="160" x2="110" y2="196" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
-      <line x1="230" y1="160" x2="260" y2="196" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="88" y="182" text-anchor="middle" fill="#27500A">попал</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="258" y="182" text-anchor="middle" fill="#888">не попал</text>
+      <!-- Лист ожидания -->
+      <rect x="20" y="172" width="160" height="44" rx="10" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1"/>
+      <text font-family="Montserrat,sans-serif" font-size="12" font-weight="700" x="100" y="188" text-anchor="middle" dominant-baseline="central" fill="#791F1F">Лист ожидания</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="100" y="205" text-anchor="middle" dominant-baseline="central" fill="#A32D2D">узкое место</text>
 
-      <!-- Стрелка от платного вниз -->
-      <line x1="495" y1="160" x2="495" y2="196" stroke="#E5004F" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
+      <!-- Конс платная с улицы -->
+      <rect x="190" y="172" width="140" height="44" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="12" font-weight="700" x="260" y="188" text-anchor="middle" dominant-baseline="central" fill="#72243E">Конс. платно</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="260" y="205" text-anchor="middle" dominant-baseline="central" fill="#993556">«с улицы»</text>
 
-      <!-- Ребёнок ЦЛП -->
-      <rect x="60" y="196" width="185" height="52" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="152" y="216" text-anchor="middle" dominant-baseline="central" fill="#27500A">Ребёнок ЦЛП</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="152" y="235" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">зачислен в группу</text>
+      <!-- Конс2 платная -->
+      <rect x="530" y="172" width="210" height="44" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="12" font-weight="700" x="635" y="188" text-anchor="middle" dominant-baseline="central" fill="#72243E">Конс 2 платно</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="635" y="205" text-anchor="middle" dominant-baseline="central" fill="#993556">к тому же специалисту</text>
 
-      <!-- Ребёнок с улицы (не попал) -->
-      <rect x="265" y="196" width="185" height="52" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="357" y="216" text-anchor="middle" dominant-baseline="central" fill="#444441">«С улицы»</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="357" y="235" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">в группу не попал</text>
+      <!-- Стрелки от листа ожидания -->
+      <line x1="70" y1="216" x2="60" y2="250" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
+      <line x1="130" y1="216" x2="175" y2="250" stroke="#888" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#farr)"/>
+      <text font-family="Montserrat,sans-serif" font-size="10" x="42" y="236" text-anchor="middle" fill="#27500A">группа</text>
+      <text font-family="Montserrat,sans-serif" font-size="10" x="178" y="236" text-anchor="middle" fill="#888">подбор</text>
 
-      <!-- Ребёнок с улицы (платный ПП) -->
-      <rect x="470" y="196" width="150" height="52" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="545" y="216" text-anchor="middle" dominant-baseline="central" fill="#72243E">«С улицы»</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="545" y="235" text-anchor="middle" dominant-baseline="central" fill="#993556">платный ПП</text>
+      <!-- Занятия -->
+      <rect x="20" y="250" width="120" height="44" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="1"/>
+      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="80" y="266" text-anchor="middle" dominant-baseline="central" fill="#27500A">Занятия</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="80" y="283" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">ребёнок ЦЛП</text>
 
-      <!-- Стрелки вниз от трёх блоков -->
-      <line x1="152" y1="248" x2="152" y2="284" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
-      <line x1="357" y1="248" x2="357" y2="284" stroke="#888" stroke-width="1.2" marker-end="url(#farr)"/>
-      <line x1="545" y1="248" x2="545" y2="284" stroke="#E5004F" stroke-width="1.2" marker-end="url(#farr)"/>
+      <!-- Подбор в группу -->
+      <rect x="150" y="250" width="140" height="44" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="12" font-weight="700" x="220" y="266" text-anchor="middle" dominant-baseline="central" fill="#444441">Подбор в группу</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="220" y="283" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">знакомство</text>
 
-      <!-- Консультации: три варианта -->
-      <rect x="60" y="284" width="185" height="64" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="152" y="304" text-anchor="middle" dominant-baseline="central" fill="#27500A">Консультации</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="152" y="322" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">всегда бесплатно</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="152" y="339" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">кроме АДОС и тестирований</text>
+      <!-- Стрелка подбор → занятия -->
+      <line x1="167" y1="272" x2="140" y2="272" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
 
-      <rect x="265" y="284" width="185" height="64" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="357" y="304" text-anchor="middle" dominant-baseline="central" fill="#72243E">Консультации</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="357" y="322" text-anchor="middle" dominant-baseline="central" fill="#993556">всегда платно</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="357" y="339" text-anchor="middle" dominant-baseline="central" fill="#993556">не стал ребёнком ЦЛП</text>
+      <!-- Стрелки от занятий -->
+      <line x1="55" y1="294" x2="55" y2="328" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
+      <line x1="105" y1="294" x2="185" y2="328" stroke="#FBA600" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
 
-      <rect x="470" y="284" width="150" height="64" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="545" y="304" text-anchor="middle" dominant-baseline="central" fill="#72243E">Консультации</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="545" y="320" text-anchor="middle" dominant-baseline="central" fill="#993556">повторно к Портновой/</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="545" y="335" text-anchor="middle" dominant-baseline="central" fill="#993556">Новикову — платно</text>
-
-      <!-- Стрелка от ребёнка ЦЛП к занятиям -->
-      <line x1="152" y1="348" x2="152" y2="384" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <!-- Регулярные занятия -->
-      <rect x="60" y="384" width="185" height="52" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="152" y="404" text-anchor="middle" dominant-baseline="central" fill="#27500A">Регулярные занятия</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="152" y="423" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">в группе у педагога</text>
+      <!-- Бесплатные конс -->
+      <rect x="20" y="328" width="120" height="44" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="12" font-weight="700" x="80" y="344" text-anchor="middle" dominant-baseline="central" fill="#27500A">Конс. бесплатно</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="80" y="361" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">специалисты ЦЛП</text>
 
       <!-- Платные тестирования -->
-      <rect x="265" y="384" width="185" height="52" rx="10" fill="#FFF8E0" stroke="#FBA600" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="357" y="404" text-anchor="middle" dominant-baseline="central" fill="#92400E">Платное тестирование</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="357" y="423" text-anchor="middle" dominant-baseline="central" fill="#B45309">АДОС и др. — при необходимости</text>
-      <line x1="245" y1="410" x2="265" y2="410" stroke="#FBA600" stroke-width="1" stroke-dasharray="3 2" marker-end="url(#farr)" fill="none"/>
+      <rect x="150" y="328" width="140" height="44" rx="10" fill="#FFF8E0" stroke="#FBA600" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="12" font-weight="700" x="220" y="344" text-anchor="middle" dominant-baseline="central" fill="#92400E">Платно</text>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="220" y="361" text-anchor="middle" dominant-baseline="central" fill="#B45309">АДОС и тестирования</text>
 
       <!-- Вывод -->
-      <rect x="60" y="464" width="560" height="68" rx="12" fill="#FFF8E0" stroke="#FBA600" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="340" y="487" text-anchor="middle" dominant-baseline="central" fill="#92400E">Главный вывод</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="340" y="507" text-anchor="middle" dominant-baseline="central" fill="#B45309">Чтобы принимать больше детей на ПП —</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="340" y="523" text-anchor="middle" dominant-baseline="central" fill="#B45309">нужно расширять ёмкость групп, а не слоты приёма</text>
+      <rect x="20" y="400" width="740" height="56" rx="12" fill="#FFF8E0" stroke="#FBA600" stroke-width="1"/>
+      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="390" y="420" text-anchor="middle" dominant-baseline="central" fill="#92400E">Главный вывод</text>
+      <text font-family="Montserrat,sans-serif" font-size="12" x="390" y="440" text-anchor="middle" dominant-baseline="central" fill="#B45309">Рост числа ПП возможен только при расширении групп — иначе растёт лист ожидания</text>
 
       <!-- Легенда -->
-      <rect x="60" y="556" width="14" height="14" rx="3" fill="#C7E9ED" stroke="#019BAB" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="80" y="568" fill="#0C6B78">Бесплатно</text>
-      <rect x="170" y="556" width="14" height="14" rx="3" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="190" y="568" fill="#993556">Платно</text>
-      <rect x="260" y="556" width="14" height="14" rx="3" fill="#EAF3DE" stroke="#04A634" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="280" y="568" fill="#27500A">Дети ЦЛП</text>
-      <line x1="370" y1="563" x2="400" y2="563" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="410" y="568" fill="#5F5E5A">Необязательный путь</text>
-    </svg>
-  </div>
-      <defs>
-        <marker id="farr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-      </defs>
-
-      <!-- Заголовок двух входов -->
-      <text font-family="Montserrat,sans-serif" font-size="11" font-weight="700" x="185" y="18" text-anchor="middle" fill="#019BAB" letter-spacing="1">ВХОД 1</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" font-weight="700" x="495" y="18" text-anchor="middle" fill="#E5004F" letter-spacing="1">ВХОД 2</text>
-
-      <!-- Вход 1: Бесплатный ПП -->
-      <rect x="80" y="26" width="210" height="56" rx="10" fill="#C7E9ED" stroke="#019BAB" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="185" y="47" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">Бесплатный ПП</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="185" y="66" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">588 приёмов · 2 специалиста ЦЛП</text>
-
-      <!-- Вход 2: Платный приём -->
-      <rect x="390" y="26" width="210" height="56" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="495" y="47" text-anchor="middle" dominant-baseline="central" fill="#72243E">Платный приём</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="495" y="66" text-anchor="middle" dominant-baseline="central" fill="#72243E">49 приёмов · конкретный специалист</text>
-
-      <!-- Стрелка от Вход 1 вниз -->
-      <line x1="185" y1="82" x2="185" y2="118" stroke="#019BAB" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <!-- Стрелка от Вход 2 вниз -->
-      <line x1="495" y1="82" x2="495" y2="118" stroke="#E5004F" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <!-- Блок 2а: Очередь (левая ветка) -->
-      <rect x="80" y="118" width="210" height="56" rx="10" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="185" y="139" text-anchor="middle" dominant-baseline="central" fill="#791F1F">Очередь</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="185" y="158" text-anchor="middle" dominant-baseline="central" fill="#A32D2D">ожидание подходящей группы</text>
-      <!-- Узкое место -->
-      <text font-family="Montserrat,sans-serif" font-size="10" font-weight="700" x="36" y="140" text-anchor="middle" fill="#A32D2D">УЗКОЕ</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" font-weight="700" x="36" y="153" text-anchor="middle" fill="#A32D2D">МЕСТО</text>
-      <line x1="58" y1="146" x2="78" y2="146" stroke="#E24B4A" stroke-width="1.5" marker-end="url(#farr)" fill="none"/>
-
-      <!-- Блок 2б: Повторные платные (правая ветка) -->
-      <rect x="390" y="118" width="210" height="56" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="495" y="139" text-anchor="middle" dominant-baseline="central" fill="#72243E">Повторно платно</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="495" y="158" text-anchor="middle" dominant-baseline="central" fill="#993556">к тому же специалисту</text>
-
-      <!-- Стрелка вниз от очереди -->
-      <line x1="185" y1="174" x2="185" y2="210" stroke="#019BAB" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <!-- Пунктир от платного к бесплатным консультациям -->
-      <line x1="390" y1="174" x2="340" y2="210" stroke="#019BAB" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#farr)"/>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="380" y="198" text-anchor="middle" fill="#019BAB">к другим</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="380" y="209" text-anchor="middle" fill="#019BAB">специалистам</text>
-
-      <!-- Блок 3: Бесплатные консультации -->
-      <rect x="80" y="210" width="290" height="52" rx="10" fill="#C7E9ED" stroke="#019BAB" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="225" y="230" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">Бесплатные консультации</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="225" y="250" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">обязательство ЦЛП после любого ПП</text>
-
-      <!-- Стрелки к подбору -->
-      <line x1="185" y1="262" x2="185" y2="295" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
-      <line x1="280" y1="262" x2="310" y2="295" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="148" y="282" text-anchor="middle" fill="#888">иногда</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="316" y="282" text-anchor="middle" fill="#27500A">сразу</text>
-
-      <!-- Блок 4а: Подбор в группу -->
-      <rect x="80" y="295" width="185" height="52" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="172" y="316" text-anchor="middle" dominant-baseline="central" fill="#444441">Подбор в группу</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="172" y="334" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">знакомство с педагогом</text>
-
-      <!-- Блок 4б: Сразу в группу -->
-      <rect x="295" y="295" width="185" height="52" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="387" y="316" text-anchor="middle" dominant-baseline="central" fill="#27500A">Прямо в группу</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="387" y="334" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">место есть сразу</text>
-
-      <!-- Стрелки к занятиям -->
-      <line x1="172" y1="347" x2="240" y2="388" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
-      <line x1="387" y1="347" x2="330" y2="388" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <!-- Блок 5: Регулярные занятия -->
-      <rect x="130" y="388" width="280" height="52" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="0.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="270" y="408" text-anchor="middle" dominant-baseline="central" fill="#27500A">Регулярные занятия</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="270" y="427" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">ребёнок зачислен в группу</text>
-
-      <!-- Вывод -->
-      <rect x="60" y="468" width="560" height="68" rx="12" fill="#FFF8E0" stroke="#FBA600" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="340" y="491" text-anchor="middle" dominant-baseline="central" fill="#92400E">Главный вывод</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="340" y="511" text-anchor="middle" dominant-baseline="central" fill="#B45309">Чтобы принимать больше детей на ПП —</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="340" y="527" text-anchor="middle" dominant-baseline="central" fill="#B45309">нужно расширять ёмкость групп, а не слоты приёма</text>
+      <rect x="20" y="475" width="12" height="12" rx="2" fill="#C7E9ED" stroke="#019BAB" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="36" y="486" fill="#0C6B78">Бесплатно</text>
+      <rect x="118" y="475" width="12" height="12" rx="2" fill="#FBEAF0" stroke="#E5004F" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="134" y="486" fill="#993556">Платно</text>
+      <rect x="196" y="475" width="12" height="12" rx="2" fill="#EAF3DE" stroke="#04A634" stroke-width="0.5"/>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="212" y="486" fill="#27500A">Дети ЦЛП</text>
+      <rect x="290" y="475" width="12" height="12" rx="2" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1"/>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="306" y="486" fill="#791F1F">Узкое место</text>
+      <line x1="400" y1="481" x2="422" y2="481" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
+      <text font-family="Montserrat,sans-serif" font-size="11" x="428" y="486" fill="#5F5E5A">Необязательный путь</text>
     </svg>
   </div>
 </div>
 </section>
 
-<!-- FLOW -->
 <section id="flow">
 <div class="si">
   <div class="eyebrow">Раздел 1</div>
@@ -440,7 +346,7 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
 <div class="si">
   <div class="eyebrow">Раздел 3</div>
   <h2 class="stitle">Специалисты</h2>
-  <p class="slead">Три профиля: специалисты бесплатного потока ППП; платные специалисты — основной источник выручки; специалисты смешанного формата — оба вида.</p>
+  <p class="slead">Три профиля: «первичники» — бесплатный поток ППП; «платные» — основной источник выручки; «смешанные» — оба вида.</p>
   <div class="tw">
     <table>
       <thead>
@@ -511,18 +417,53 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
 <section id="cancellations">
 <div class="si">
   <div class="eyebrow">Раздел 6</div>
-  <h2 class="stitle">Отмены и незаполненные слоты</h2>
-  <p class="slead">Зелёным в таблице отмечены отмены по болезни или отсутствию педагога. Жёлтым в колонке «Время» — слоты, куда никого не позвали.</p>
+  <h2 class="stitle">Состоявшиеся и несостоявшиеся консультации</h2>
+  <p class="slead">Консультацией мы называем и первичный приём, и повторную консультацию — любое запланированное взаимодействие специалиста с ребёнком.</p>
+
   <div class="mgrid">
-    <div class="mc"><div class="mc-label">Отмены (зелёные строки)</div><div class="mc-val">375</div><div class="mc-sub">болезнь ребёнка или педагога</div></div>
-    <div class="mc"><div class="mc-label">Закрыты заменой</div><div class="mc-val" style="color:var(--green100);">138</div><div class="mc-sub">37% — нашли другого ребёнка</div></div>
-    <div class="mc dn"><div class="mc-label">Слот потерян</div><div class="mc-val">237</div><div class="mc-sub">63% — время ушло впустую</div></div>
+    <div class="mc ac"><div class="mc-label">Всего запланировано</div><div class="mc-val">1 309</div><div class="mc-sub">слотов за год</div></div>
+    <div class="mc"><div class="mc-label">Состоялось</div><div class="mc-val" style="color:var(--green100);">1 130</div><div class="mc-sub">86% от запланированных</div></div>
+    <div class="mc dn"><div class="mc-label">Не состоялось</div><div class="mc-val">179</div><div class="mc-sub">14% потерь</div></div>
     <div class="mc wn"><div class="mc-label">Незаполненных слотов</div><div class="mc-val">46</div><div class="mc-sub">специалист есть, ребёнка не нашли</div></div>
   </div>
+
   <div class="crow">
     <div class="cc">
-      <div class="cc-title">Судьба отменённых слотов</div>
-      <div class="cc-sub">Из 375 зелёных строк</div>
+      <div class="cc-title">Когда консультация состоялась</div>
+      <div style="display:grid;gap:12px;margin-top:8px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--bg);border-radius:var(--r);border-left:4px solid var(--green100);">
+          <div style="font-size:24px;font-weight:700;color:var(--green100);min-width:48px;">1 001</div>
+          <div><div style="font-size:14px;font-weight:600;color:var(--ink);">Ребёнок нашёлся — консультация состоялась</div><div style="font-size:13px;color:var(--ink3);">никто не отменял, всё прошло по плану</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--bg);border-radius:var(--r);border-left:4px solid var(--green80);">
+          <div style="font-size:24px;font-weight:700;color:var(--green80);min-width:48px;">129</div>
+          <div><div style="font-size:14px;font-weight:600;color:var(--ink);">Ребёнок отменился → нашли другого → состоялась</div><div style="font-size:13px;color:var(--ink3);">система замен сработала</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cc">
+      <div class="cc-title">Когда консультация не состоялась</div>
+      <div style="display:grid;gap:12px;margin-top:8px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--bg);border-radius:var(--r);border-left:4px solid var(--pink100);">
+          <div style="font-size:24px;font-weight:700;color:var(--pink100);min-width:48px;">176</div>
+          <div><div style="font-size:14px;font-weight:600;color:var(--ink);">Ребёнок отменился — замену не нашли</div><div style="font-size:13px;color:var(--ink3);">или педагог отменил приём</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--bg);border-radius:var(--r);border-left:4px solid var(--yellow80);">
+          <div style="font-size:24px;font-weight:700;color:var(--yellow80);min-width:48px;">46</div>
+          <div><div style="font-size:14px;font-weight:600;color:var(--ink);">Ребёнка изначально не нашли</div><div style="font-size:13px;color:var(--ink3);">слот пустой — специалист готов, очередь не сработала</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box" style="border-left:3px solid var(--green100);margin-top:8px;">
+    <div class="info-box-title" style="color:var(--green100);">Система замен работает — но есть резерв</div>
+    <div class="info-box-text">Из 305 отменённых слотов (зелёные строки в таблице) координаторы находят замену в <strong>42% случаев</strong>. Это хороший показатель. Потенциал роста — в 46 жёлтых слотах: там специалист готов принять, но ребёнок из очереди так и не назначен. В примечаниях у многих из них уже есть имена кандидатов.</div>
+  </div>
+
+  <div class="charts-row" style="margin-top:20px;">
+    <div class="cc">
+      <div class="cc-title">Итог: состоялось vs не состоялось</div>
       <div style="position:relative;height:200px;"><canvas id="cancelDonut"></canvas></div>
     </div>
     <div class="cc">
@@ -530,10 +471,6 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
       <div class="cc-sub">Потеряно vs заменено</div>
       <div style="position:relative;height:200px;"><canvas id="cancelWeeks"></canvas></div>
     </div>
-  </div>
-  <div class="info-box" style="border-left:3px solid var(--green100);">
-    <div class="info-box-title" style="color:var(--green100);">Как работает система замен</div>
-    <div class="info-box-text">Когда ребёнок отменяет приём, координаторы ищут замену на то же время к тому же специалисту. Это работает в <strong>37% случаев</strong>. Жёлтые строки — слоты, где специалист готов принять, но ребёнка так и не нашли. В примечаниях часто видны имена кандидатов из очереди («Ходжаева, Емельянов...»).</div>
   </div>
 </div>
 </section>
@@ -648,219 +585,10 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
 </div>
 </section>
 
-<!-- FUNNEL -->
-<section id="funnel">
-<div class="si">
-  <div class="eyebrow">Раздел 9</div>
-  <h2 class="stitle">Путь ребёнка в ЦЛП</h2>
-  <p class="slead">Воронка показывает полный маршрут — от первого обращения семьи до регулярных занятий. Узкое место находится не на входе, а внутри.</p>
-
-  <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:32px 24px;">
-    <svg width="100%" viewBox="0 0 680 560">
-      <defs>
-        <marker id="farr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-      </defs>
-
-      <g class="node c-blue">
-        <rect x="215" y="20" width="250" height="52" rx="10" stroke-width="0.5"/>
-        <text class="th" x="340" y="40" text-anchor="middle" dominant-baseline="central">Заявка семьи</text>
-        <text class="ts" x="340" y="58" text-anchor="middle" dominant-baseline="central">семья узнаёт о ЦЛП и обращается</text>
-      </g>
-
-      <line x1="340" y1="72" x2="340" y2="100" stroke="#019BAB" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <g class="node c-blue">
-        <rect x="175" y="100" width="330" height="56" rx="10" stroke-width="0.5"/>
-        <text class="th" x="340" y="121" text-anchor="middle" dominant-baseline="central">Первичный приём (ПП)</text>
-        <text class="ts" x="340" y="141" text-anchor="middle" dominant-baseline="central">637 за год · бесплатно · 2 специалиста</text>
-      </g>
-
-      <g class="c-blue">
-        <rect x="530" y="108" width="68" height="40" rx="20" stroke-width="0.5"/>
-        <text class="th" x="564" y="122" text-anchor="middle" dominant-baseline="central">637</text>
-        <text class="ts" x="564" y="138" text-anchor="middle" dominant-baseline="central">приёмов</text>
-      </g>
-
-      <line x1="340" y1="156" x2="340" y2="184" stroke="#019BAB" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <g class="node c-red">
-        <rect x="145" y="184" width="390" height="66" rx="10" stroke-width="1"/>
-        <text class="th" x="340" y="207" text-anchor="middle" dominant-baseline="central">Очередь на занятия</text>
-        <text class="ts" x="340" y="225" text-anchor="middle" dominant-baseline="central">ребёнок ждёт подходящей группы</text>
-        <text class="ts" x="340" y="241" text-anchor="middle" dominant-baseline="central">срок — от нескольких недель до месяцев</text>
-      </g>
-
-      <text class="ts" x="82" y="218" text-anchor="middle" fill="#A32D2D">УЗКОЕ</text>
-      <text class="ts" x="82" y="233" text-anchor="middle" fill="#A32D2D">МЕСТО</text>
-      <line x1="115" y1="220" x2="143" y2="220" stroke="#E24B4A" stroke-width="1.5" marker-end="url(#farr)" fill="none"/>
-
-      <line x1="300" y1="250" x2="300" y2="285" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
-      <text class="ts" x="233" y="272" text-anchor="middle" fill="#888">иногда</text>
-      <line x1="390" y1="250" x2="390" y2="285" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
-      <text class="ts" x="455" y="272" text-anchor="middle" fill="#27500A">сразу</text>
-
-      <g class="node c-gray">
-        <rect x="145" y="285" width="170" height="52" rx="10" stroke-width="0.5"/>
-        <text class="th" x="230" y="305" text-anchor="middle" dominant-baseline="central">Подбор в группу</text>
-        <text class="ts" x="230" y="323" text-anchor="middle" dominant-baseline="central">знакомство с педагогом</text>
-      </g>
-
-      <g class="node c-green">
-        <rect x="365" y="285" width="170" height="52" rx="10" stroke-width="0.5"/>
-        <text class="th" x="450" y="305" text-anchor="middle" dominant-baseline="central">Прямо в группу</text>
-        <text class="ts" x="450" y="323" text-anchor="middle" dominant-baseline="central">место есть сразу</text>
-      </g>
-
-      <line x1="230" y1="337" x2="300" y2="378" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#farr)"/>
-      <line x1="450" y1="337" x2="380" y2="378" stroke="#04A634" stroke-width="1.5" marker-end="url(#farr)"/>
-
-      <g class="node c-green">
-        <rect x="175" y="378" width="330" height="56" rx="10" stroke-width="0.5"/>
-        <text class="th" x="340" y="398" text-anchor="middle" dominant-baseline="central">Регулярные занятия</text>
-        <text class="ts" x="340" y="418" text-anchor="middle" dominant-baseline="central">ребёнок зачислен в группу к педагогу</text>
-      </g>
-
-      <rect x="100" y="460" width="480" height="64" rx="12" fill="#FEF3C7" stroke="#FBA600" stroke-width="1"/>
-      <text class="th" x="340" y="482" text-anchor="middle" dominant-baseline="central" fill="#92400E">Главный вывод</text>
-      <text class="ts" x="340" y="500" text-anchor="middle" dominant-baseline="central" fill="#B45309">Чтобы принимать больше детей на ПП —</text>
-      <text class="ts" x="340" y="516" text-anchor="middle" dominant-baseline="central" fill="#B45309">нужно расширять ёмкость групп, а не число слотов приёма</text>
-    </svg>
-  </div>
-</div>
-</section>
-
-<!-- FEEDBACK -->
-<section id="feedback" style="background:var(--bg3);">
-<div class="si">
-  <div class="eyebrow">Обратная связь</div>
-  <h2 class="stitle">Ваши мысли и идеи</h2>
-  <p class="slead">Поделитесь впечатлениями от анализа, предложите улучшения или просто напишите что думаете. Все ответы будут использованы в дальнейшей работе.</p>
-
-  <div id="form-wrap" style="max-width:680px;">
-    <form id="fbForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display:grid;gap:20px;">
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-        <div>
-          <label style="display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:8px;">Ваше имя <span style="color:var(--ink3);font-weight:400;">(необязательно)</span></label>
-          <input type="text" name="name" placeholder="Как вас зовут" style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg);outline:none;">
-        </div>
-        <div>
-          <label style="display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:8px;">Ваша роль</label>
-          <select name="role" style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg);outline:none;">
-            <option value="">— выберите —</option>
-            <option>Директор</option>
-            <option>Педагог</option>
-            <option>Координатор</option>
-            <option>Внешний партнёр</option>
-            <option>Другое</option>
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <label style="display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:10px;">Какой раздел анализа для вас самый важный?</label>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;" id="sections-grid">
-        </div>
-      </div>
-
-      <div>
-        <label style="display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:10px;">Что вы хотите изменить в первую очередь?</label>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;" id="priorities-grid">
-        </div>
-      </div>
-
-      <div>
-        <label style="display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:8px;">Что вас удивило в данных?</label>
-        <textarea name="surprised" rows="3" placeholder="Напишите что показалось неожиданным..." style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg);resize:vertical;outline:none;"></textarea>
-      </div>
-
-      <div>
-        <label style="display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:8px;">С чем вы не согласны или хотите уточнить?</label>
-        <textarea name="disagree" rows="3" placeholder="Любые возражения или уточнения..." style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg);resize:vertical;outline:none;"></textarea>
-      </div>
-
-      <div>
-        <label style="display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:8px;">Ваши идеи и предложения</label>
-        <textarea name="ideas" rows="4" placeholder="Любые мысли по улучшению системы приёмов, работы с расписанием, данными..." style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:14px;color:var(--ink);background:var(--bg);resize:vertical;outline:none;"></textarea>
-      </div>
-
-      <div style="background:var(--blue20);border-radius:var(--r);padding:16px 20px;">
-        <label style="display:block;font-size:13px;font-weight:600;color:#019BAB;margin-bottom:8px;">Хочу сказать кое-что хорошее 😊</label>
-        <textarea name="kudos" rows="2" placeholder="Место для добрых слов..." style="width:100%;padding:10px 14px;border:1px solid rgba(1,155,171,0.3);border-radius:var(--r);font-family:inherit;font-size:14px;color:var(--ink);background:white;resize:vertical;outline:none;"></textarea>
-      </div>
-
-      <button type="submit" style="background:var(--blue100);color:white;border:none;border-radius:var(--r);padding:14px 32px;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:opacity 0.2s;align-self:start;">
-        Отправить ответ
-      </button>
-
-      <input type="hidden" name="sections" id="sections-hidden">
-      <input type="hidden" name="priorities" id="priorities-hidden">
-    </form>
-  </div>
-
-  <div id="form-success" style="display:none;text-align:center;padding:48px 24px;">
-    <div style="width:64px;height:64px;background:var(--blue20);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;">✓</div>
-    <h3 style="font-size:22px;font-weight:700;color:var(--ink);margin-bottom:8px;">Спасибо!</h3>
-    <p style="font-size:16px;color:var(--ink2);">Ваш ответ получен. Он будет учтён в дальнейшей работе.</p>
-  </div>
-</div>
-</section>
-
 <footer>
   <strong>ЦЛП — Анализ расписания 2025/2026</strong><br>
   Данные на основе файла «Расписание_2025-2026_анализ.xlsx» · 33 недели · 1 275 записей
 </footer>
-
-<script>
-const sectionOptions = ['Общий поток','Типы событий','Специалисты','Нагрузка по дням','Площадки','Отмены','Проблемы в данных','Выводы'];
-const priorityOptions = ['Загрузить пятницу','Улучшить систему замен','Заполнять незаполненные слоты','Расширить ёмкость групп','Улучшить структуру таблицы','Развивать онлайн-формат'];
-
-function makeCheckboxes(containerId, hiddenId, options) {
-  const grid = document.getElementById(containerId);
-  const selected = new Set();
-  options.forEach(opt => {
-    const label = document.createElement('label');
-    label.style.cssText = 'display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:13px;color:var(--ink2);transition:all 0.15s;';
-    const cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.value = opt;
-    cb.style.cssText = 'width:16px;height:16px;accent-color:var(--blue100);flex-shrink:0;';
-    cb.addEventListener('change', () => {
-      if (cb.checked) { selected.add(opt); label.style.borderColor='var(--blue100)'; label.style.background='var(--blue20)'; label.style.color='var(--blue100)'; }
-      else { selected.delete(opt); label.style.borderColor='var(--border)'; label.style.background=''; label.style.color='var(--ink2)'; }
-      document.getElementById(hiddenId).value = Array.from(selected).join(', ');
-    });
-    label.appendChild(cb);
-    label.appendChild(document.createTextNode(opt));
-    grid.appendChild(label);
-  });
-}
-
-makeCheckboxes('sections-grid', 'sections-hidden', sectionOptions);
-makeCheckboxes('priorities-grid', 'priorities-hidden', priorityOptions);
-
-document.getElementById('fbForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type=submit]');
-  btn.textContent = 'Отправляем...';
-  btn.disabled = true;
-  try {
-    const resp = await fetch(this.action, { method:'POST', body: new FormData(this), headers:{'Accept':'application/json'} });
-    if (resp.ok) {
-      document.getElementById('form-wrap').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    } else {
-      btn.textContent = 'Ошибка. Попробуйте ещё раз';
-      btn.disabled = false;
-    }
-  } catch(err) {
-    btn.textContent = 'Ошибка. Попробуйте ещё раз';
-    btn.disabled = false;
-  }
-});
-</script>
 
 <script>
 const gC='rgba(42,42,42,0.08)',tC='rgba(42,42,42,0.4)';
@@ -873,11 +601,11 @@ new Chart(document.getElementById('payDonut'),{type:'doughnut',data:{labels:['Б
 new Chart(document.getElementById('sumsChart'),{type:'bar',data:{labels:['1 000 ₽','2 000 ₽','4 000 ₽','6 000 ₽','8 000 ₽','10 000 ₽'],datasets:[{data:[4,12,256,11,4,3],backgroundColor:'#04A634'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:tC,font:{size:11}},grid:{display:false}},y:{ticks:{color:tC,font:{size:10}},grid:{color:gC}}}}});
 new Chart(document.getElementById('dayChart'),{type:'bar',data:{labels:['Пн','Вт','Ср','Чт','Пт','Сб'],datasets:[{label:'Первичных',data:[136,172,128,116,81,4],backgroundColor:'#019BAB'},{label:'Консультаций',data:[141,157,192,97,51,5],backgroundColor:'#04A634'},{label:'Платных',data:[47,103,102,31,6,2],backgroundColor:'#E5004F'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:tC,font:{size:12}},grid:{display:false}},y:{ticks:{color:tC,font:{size:10}},grid:{color:gC}}}}});
 new Chart(document.getElementById('platChart'),{type:'bar',data:{labels:['Строителей','Коньково','Онлайн'],datasets:[{data:[818000,319500,36000],backgroundColor:['#019BAB','#04A634','#FBA600']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.raw.toLocaleString('ru')+' ₽'}}},scales:{x:{ticks:{color:tC,font:{size:12}},grid:{display:false}},y:{ticks:{color:tC,font:{size:10},callback:v=>(v/1000)+'к'},grid:{color:gC}}}}});
-new Chart(document.getElementById('cancelDonut'),{type:'doughnut',data:{labels:['Потеряно (237)','Заменено (138)'],datasets:[{data:[237,138],backgroundColor:['#E5004F','#04A634'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:12},color:tC,boxWidth:10,padding:10}}}}});
+new Chart(document.getElementById('cancelDonut'),{type:'doughnut',data:{labels:['Состоялось (1130)','Не состоялось (179)'],datasets:[{data:[1130,179],backgroundColor:['#04A634','#E5004F'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:12},color:tC,boxWidth:10,padding:10}}}}}})
 new Chart(document.getElementById('cancelWeeks'),{type:'bar',data:{labels:['22.09','15.09','02.03','19.01','15.12','08.09','23.03','16.02','01.12','09.02'],datasets:[{label:'Потеряно',data:[17,12,16,12,13,11,13,12,7,11],backgroundColor:'#E5004F',stack:'s'},{label:'Заменено',data:[4,9,3,5,4,6,3,4,9,4],backgroundColor:'#04A634',stack:'s'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11},color:tC,boxWidth:10,padding:8}}},scales:{x:{stacked:true,ticks:{color:tC,font:{size:10}},grid:{display:false}},y:{stacked:true,ticks:{color:tC,font:{size:10}},grid:{color:gC}}}}});
 
 const specs=[['Сафронова',115,30,145,18,70000,'primary'],['Моржина',85,51,136,32,128000,'primary'],['Новиков',6,104,110,69,266000,'paid'],['Зельдин',17,83,100,30,118000,'paid'],['Портнова',27,70,97,64,250000,'paid'],['Примакова',14,67,81,4,16000,'mixed'],['Будильцева',51,16,67,4,16000,'primary'],['Макеева',53,13,66,3,12000,'primary'],['Ермолаева',40,20,60,15,60000,'primary'],['Котляренко',45,8,53,1,4000,'primary'],['Яремчук',41,9,50,5,28000,'primary'],['Бояршинова',23,26,49,11,42000,'mixed'],['Пайкова',39,6,45,1,4000,'primary'],['Фионова О',29,14,43,11,44000,'mixed'],['Константинова',23,19,42,12,58000,'mixed']];
-const pMap={primary:['Бесплатный ПП','pb1'],paid:['Платный','pb2'],mixed:['ПП и конс','pb3']};
+const pMap={primary:['Первичник','pb1'],paid:['Платный','pb2'],mixed:['Смешанный','pb3']};
 const body=document.getElementById('specBody');
 specs.forEach(([n,p,c,t,pd,r,pr])=>{
   const pct=Math.round(pd/t*100),bw=Math.round(t/145*100),[pl,pc]=pMap[pr];
