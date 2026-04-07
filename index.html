@@ -147,6 +147,7 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
     <a href="#cancellations">Отмены</a>
     <a href="#issues">Проблемы</a>
     <a href="#conclusions">Выводы</a>
+    <a href="#feedback">Обратная связь</a>
   </div>
 </div>
 </nav>
@@ -617,6 +618,121 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
   </div>
 </div>
 </section>
+
+
+<!-- FEEDBACK -->
+<section id="feedback" style="background:var(--bg3);">
+<div class="si">
+  <div class="eyebrow">Обратная связь</div>
+  <h2 class="stitle">Ваши мысли и идеи</h2>
+  <p class="slead">Поделитесь впечатлениями от анализа — что важно, что удивило, что хотите изменить в первую очередь.</p>
+
+  <div id="form-wrap" style="max-width:680px;">
+    <form id="fbForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display:grid;gap:20px;">
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="font-size:13px;font-weight:600;color:var(--ink2);display:block;margin-bottom:6px;">Ваше имя (необязательно)</label>
+          <input type="text" name="name" placeholder="Имя" style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:Montserrat,sans-serif;background:var(--bg);color:var(--ink);">
+        </div>
+        <div>
+          <label style="font-size:13px;font-weight:600;color:var(--ink2);display:block;margin-bottom:6px;">Ваша роль</label>
+          <select name="role" style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:Montserrat,sans-serif;background:var(--bg);color:var(--ink);">
+            <option value="">Выберите роль</option>
+            <option>Директор</option>
+            <option>Педагог</option>
+            <option>Координатор</option>
+            <option>Внешний партнёр</option>
+            <option>Другое</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label style="font-size:13px;font-weight:600;color:var(--ink2);display:block;margin-bottom:10px;">Какой раздел анализа для вас самый важный?</label>
+        <div id="sections-grid" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+        <input type="hidden" id="sections-hidden" name="important_sections">
+      </div>
+
+      <div>
+        <label style="font-size:13px;font-weight:600;color:var(--ink2);display:block;margin-bottom:10px;">Что нужно изменить в первую очередь?</label>
+        <div id="priorities-grid" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+        <input type="hidden" id="priorities-hidden" name="priorities">
+      </div>
+
+      <div>
+        <label style="font-size:13px;font-weight:600;color:var(--ink2);display:block;margin-bottom:6px;">Что удивило или показалось неожиданным?</label>
+        <textarea name="surprised" rows="3" placeholder="Ваши наблюдения..." style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:Montserrat,sans-serif;background:var(--bg);color:var(--ink);resize:vertical;"></textarea>
+      </div>
+
+      <div>
+        <label style="font-size:13px;font-weight:600;color:var(--ink2);display:block;margin-bottom:6px;">Идеи и предложения</label>
+        <textarea name="ideas" rows="4" placeholder="Любые мысли по улучшению системы приёмов..." style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:Montserrat,sans-serif;background:var(--bg);color:var(--ink);resize:vertical;"></textarea>
+      </div>
+
+      <div>
+        <label style="font-size:13px;font-weight:600;color:var(--ink2);display:block;margin-bottom:6px;">Хочу сказать кое-что хорошее</label>
+        <textarea name="positive" rows="2" placeholder="Необязательно, но приятно..." style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:Montserrat,sans-serif;background:var(--bg);color:var(--ink);resize:vertical;"></textarea>
+      </div>
+
+      <button type="submit" style="padding:12px 32px;background:var(--blue100);color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:700;font-family:Montserrat,sans-serif;cursor:pointer;width:fit-content;">Отправить</button>
+    </form>
+  </div>
+
+  <div id="form-success" style="display:none;padding:32px;background:var(--bg2);border-radius:var(--r);text-align:center;">
+    <div style="font-size:18px;font-weight:700;color:var(--green100);margin-bottom:8px;">Спасибо!</div>
+    <div style="font-size:15px;color:var(--ink2);">Ваш отзыв получен и будет учтён в дальнейшей работе.</div>
+  </div>
+</div>
+</section>
+
+<script>
+const sectionOptions = ['Общий поток','Типы приёмов','Специалисты','Нагрузка по дням','Площадки','Отмены','Проблемы в данных','Выводы'];
+const priorityOptions = ['Загрузить пятницу','Улучшить систему замен','Заполнять пустые слоты','Расширить группы','Улучшить структуру таблицы','Развивать онлайн-формат'];
+
+function makeCheckboxes(gridId, hiddenId, options) {
+  const grid = document.getElementById(gridId);
+  const selected = new Set();
+  options.forEach(opt => {
+    const label = document.createElement('label');
+    label.style.cssText = 'display:flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid var(--border);border-radius:20px;font-size:13px;cursor:pointer;color:var(--ink2);transition:all 0.15s;user-select:none;';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.style.display = 'none';
+    cb.addEventListener('change', () => {
+      if (cb.checked) { selected.add(opt); label.style.borderColor='var(--blue100)'; label.style.background='var(--blue20)'; label.style.color='var(--blue100)'; }
+      else { selected.delete(opt); label.style.borderColor='var(--border)'; label.style.background=''; label.style.color='var(--ink2)'; }
+      document.getElementById(hiddenId).value = Array.from(selected).join(', ');
+    });
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(opt));
+    grid.appendChild(label);
+  });
+}
+
+makeCheckboxes('sections-grid', 'sections-hidden', sectionOptions);
+makeCheckboxes('priorities-grid', 'priorities-hidden', priorityOptions);
+
+document.getElementById('fbForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type=submit]');
+  btn.textContent = 'Отправляем...';
+  btn.disabled = true;
+  try {
+    const resp = await fetch(this.action, { method:'POST', body: new FormData(this), headers:{'Accept':'application/json'} });
+    if (resp.ok) {
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Ошибка. Попробуйте ещё раз';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Ошибка. Попробуйте ещё раз';
+    btn.disabled = false;
+  }
+});
+</script>
 
 <footer>
   <strong>ЦЛП — Анализ расписания 2025/2026</strong><br>
