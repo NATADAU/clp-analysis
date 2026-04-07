@@ -171,116 +171,147 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
 <div class="si">
   <div class="eyebrow">С чего начать</div>
   <h2 class="stitle">Путь ребёнка в ЦЛП</h2>
-  <p class="slead">Любой новый ребёнок приходит через один из двух входов. Оба пути могут в итоге привести к регулярным занятиям.</p>
+  <p class="slead">Любой новый ребёнок приходит через один из двух входов. Оба пути могут привести к регулярным занятиям.</p>
   <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:28px 20px;overflow-x:auto;">
-    <svg width="100%" viewBox="0 0 700 580" style="min-width:560px;">
-      <defs>
-        <marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-      </defs>
 
-      <!-- ===================== ROW 0: Новый ребёнок ===================== -->
-      <rect x="250" y="10" width="200" height="44" rx="22" fill="#019BAB" stroke="none"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="350" y="32" text-anchor="middle" dominant-baseline="central" fill="#fff">Новый ребёнок</text>
+    <div style="display:flex;justify-content:center;gap:40px;align-items:flex-start;font-family:Montserrat,sans-serif;min-width:640px;">
 
-      <!-- Стрелки вниз-влево и вниз-вправо -->
-      <line x1="305" y1="54" x2="160" y2="98" stroke="#019BAB" stroke-width="2" marker-end="url(#fa)"/>
-      <line x1="395" y1="54" x2="540" y2="98" stroke="#E5004F" stroke-width="2" marker-end="url(#fa)"/>
-      <text font-family="Montserrat,sans-serif" font-size="11" font-weight="600" x="208" y="80" text-anchor="middle" fill="#019BAB">бесплатно</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" font-weight="600" x="492" y="80" text-anchor="middle" fill="#E5004F">платно</text>
+      <!-- ЛЕВЫЙ ПУТЬ -->
+      <div style="display:flex;flex-direction:column;align-items:center;">
 
-      <!-- ===================== ROW 1: ПП и Конс1 ===================== -->
-      <!-- ПП бесплатный -->
-      <rect x="40" y="98" width="240" height="52" rx="12" fill="#C7E9ED" stroke="#019BAB" stroke-width="1.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="160" y="117" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">Первичный приём</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="160" y="136" text-anchor="middle" dominant-baseline="central" fill="#0C6B78">588 · бесплатно</text>
+        <div style="background:#C7E9ED;border:1.5px solid #019BAB;color:#0C6B78;border-radius:10px;padding:10px 20px;text-align:center;font-size:13px;font-weight:700;min-width:160px;">Новый ребёнок</div>
+        <div style="width:2px;height:28px;background:#019BAB;position:relative;"><div style="position:absolute;bottom:-6px;left:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #019BAB;"></div></div>
 
-      <!-- Конс1 платная -->
-      <rect x="420" y="98" width="240" height="52" rx="12" fill="#FBEAF0" stroke="#E5004F" stroke-width="1.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="540" y="117" text-anchor="middle" dominant-baseline="central" fill="#72243E">Консультация 1</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="540" y="136" text-anchor="middle" dominant-baseline="central" fill="#993556">Новиков / Портнова · 49 · платно</text>
+        <div style="background:#C7E9ED;border:1.5px solid #019BAB;color:#0C6B78;border-radius:10px;padding:10px 20px;text-align:center;font-size:13px;font-weight:700;max-width:220px;">
+          Первичный психолого-педагогический приём
+          <div style="font-size:11px;font-weight:400;margin-top:3px;">со специалистом ЦЛП</div>
+        </div>
+        <div style="width:2px;height:28px;background:#019BAB;position:relative;"><div style="position:absolute;bottom:-6px;left:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #019BAB;"></div></div>
 
-      <!-- ===================== ROW 2: после ПП и Конс1 ===================== -->
-      <!-- Стрелки от ПП: очередь / платная конс / ушёл -->
-      <line x1="100" y1="150" x2="70" y2="194" stroke="#E24B4A" stroke-width="2" marker-end="url(#fa)"/>
-      <line x1="160" y1="150" x2="215" y2="194" stroke="#888" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#fa)"/>
-      <line x1="220" y1="150" x2="310" y2="194" stroke="#ccc" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#fa)"/>
-      <text font-family="Montserrat,sans-serif" font-size="10" font-weight="700" x="56" y="177" text-anchor="middle" fill="#A32D2D">очередь</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="210" y="177" text-anchor="middle" fill="#888">конс.</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="320" y="177" text-anchor="middle" fill="#bbb">ушёл</text>
+        <div style="background:#FCEBEB;border:1.5px solid #E24B4A;color:#791F1F;border-radius:10px;padding:10px 20px;text-align:center;font-size:13px;font-weight:700;min-width:160px;">
+          Лист ожидания
+          <div style="font-size:11px;font-weight:400;margin-top:3px;">очередь на занятия</div>
+        </div>
 
-      <!-- Стрелки от Конс1: на ПП / повторно -->
-      <line x1="480" y1="150" x2="390" y2="194" stroke="#019BAB" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#fa)"/>
-      <line x1="600" y1="150" x2="640" y2="194" stroke="#E5004F" stroke-width="2" marker-end="url(#fa)"/>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="410" y="177" text-anchor="middle" fill="#019BAB">→ на ПП</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" font-weight="700" x="654" y="177" text-anchor="middle" fill="#E5004F">повторно</text>
+        <!-- Три ветки от листа ожидания -->
+        <div style="position:relative;width:440px;height:36px;">
+          <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:2px;height:10px;background:#888;"></div>
+          <div style="position:absolute;top:10px;left:calc(50% - 150px);width:300px;height:2px;background:#888;"></div>
+          <div style="position:absolute;top:10px;left:calc(50% - 150px);width:2px;height:26px;background:#888;"></div>
+          <div style="position:absolute;top:10px;left:calc(50% - 1px);width:2px;height:26px;background:#888;"></div>
+          <div style="position:absolute;top:10px;left:calc(50% + 150px);width:2px;height:26px;background:#888;"></div>
+          <div style="position:absolute;bottom:0;left:calc(50% - 154px);border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #888;"></div>
+          <div style="position:absolute;bottom:0;left:calc(50% - 4px);border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #888;"></div>
+          <div style="position:absolute;bottom:0;left:calc(50% + 146px);border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #888;"></div>
+        </div>
 
-      <!-- Лист ожидания -->
-      <rect x="20" y="194" width="150" height="48" rx="10" fill="#FCEBEB" stroke="#E24B4A" stroke-width="1.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="95" y="212" text-anchor="middle" dominant-baseline="central" fill="#791F1F">Лист ожидания</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="95" y="231" text-anchor="middle" dominant-baseline="central" fill="#A32D2D">↑ узкое место</text>
+        <div style="display:flex;gap:16px;align-items:flex-start;width:440px;">
 
-      <!-- Конс платно с улицы -->
-      <rect x="180" y="194" width="150" height="48" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="255" y="212" text-anchor="middle" dominant-baseline="central" fill="#72243E">Конс. платно</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="255" y="231" text-anchor="middle" dominant-baseline="central" fill="#993556">«с улицы»</text>
+          <!-- Ветка 1: Подбор в группу -->
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;">
+            <div style="background:#F1EFE8;border:1.5px solid #888780;color:#444441;border-radius:10px;padding:10px 12px;text-align:center;font-size:12px;font-weight:700;width:100%;">
+              Подбор в группу
+              <div style="font-size:11px;font-weight:400;margin-top:2px;">знакомство с педагогом</div>
+            </div>
+            <div style="width:2px;height:24px;background:#04A634;position:relative;"><div style="position:absolute;bottom:-6px;left:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #04A634;"></div></div>
+            <div style="background:#EAF3DE;border:1.5px solid #04A634;color:#27500A;border-radius:10px;padding:10px 12px;text-align:center;font-size:13px;font-weight:700;width:100%;">Занятия</div>
+          </div>
 
-      <!-- Конс2 платно повторная -->
-      <rect x="550" y="194" width="150" height="48" rx="10" fill="#FBEAF0" stroke="#E5004F" stroke-width="1.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="625" y="212" text-anchor="middle" dominant-baseline="central" fill="#72243E">Конс 2 платно</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="625" y="231" text-anchor="middle" dominant-baseline="central" fill="#993556">тот же специалист</text>
+          <!-- Ветка 2: Сразу на занятия -->
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding-top:54px;">
+            <div style="background:#EAF3DE;border:1.5px solid #04A634;color:#27500A;border-radius:10px;padding:10px 12px;text-align:center;font-size:13px;font-weight:700;width:100%;">Занятия</div>
+          </div>
 
-      <!-- ===================== ROW 3: Занятия ===================== -->
-      <!-- Стрелки к занятиям -->
-      <line x1="70" y1="242" x2="70" y2="306" stroke="#04A634" stroke-width="2" marker-end="url(#fa)"/>
-      <line x1="120" y1="242" x2="200" y2="306" stroke="#888" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#fa)"/>
-      <!-- Длинная пунктирная от Конс2 к занятиям -->
-      <path d="M625 242 Q625 280 350 306" fill="none" stroke="#04A634" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#fa)"/>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="52" y="278" text-anchor="middle" fill="#27500A" font-weight="700">группа</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="188" y="278" text-anchor="middle" fill="#888">подбор</text>
-      <text font-family="Montserrat,sans-serif" font-size="10" x="530" y="278" text-anchor="middle" fill="#27500A">→ через ПП</text>
+          <!-- Ветка 3: Разовая консультация -->
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;">
+            <div style="background:#F1EFE8;border:1.5px solid #888780;color:#444441;border-radius:10px;padding:10px 12px;text-align:center;font-size:12px;font-weight:700;width:100%;">
+              Разовая консультация
+              <div style="font-size:11px;font-weight:400;margin-top:2px;">у другого специалиста ЦЛП</div>
+            </div>
+            <div style="width:2px;height:24px;background:#888;position:relative;"><div style="position:absolute;bottom:-6px;left:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #888;"></div></div>
+            <div style="background:#F1EFE8;border:1.5px dashed #888780;color:#888;border-radius:10px;padding:10px 12px;text-align:center;font-size:12px;width:100%;">
+              возможен переход<br>на занятия
+            </div>
+          </div>
 
-      <!-- Занятия -->
-      <rect x="20" y="306" width="160" height="52" rx="12" fill="#EAF3DE" stroke="#04A634" stroke-width="2"/>
-      <text font-family="Montserrat,sans-serif" font-size="14" font-weight="700" x="100" y="325" text-anchor="middle" dominant-baseline="central" fill="#27500A">Занятия</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="100" y="344" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">ребёнок ЦЛП</text>
+        </div>
 
-      <!-- Подбор в группу -->
-      <rect x="190" y="306" width="160" height="52" rx="10" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="270" y="325" text-anchor="middle" dominant-baseline="central" fill="#444441">Подбор в группу</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="270" y="344" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">знакомство</text>
-      <!-- Стрелка подбор → занятия -->
-      <line x1="207" y1="332" x2="180" y2="332" stroke="#04A634" stroke-width="2" marker-end="url(#fa)"/>
+        <!-- Стрелка от занятий вниз -->
+        <div style="width:2px;height:28px;background:#04A634;margin-top:8px;position:relative;"><div style="position:absolute;bottom:-6px;left:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #04A634;"></div></div>
 
-      <!-- ===================== ROW 4: Конс от занятий ===================== -->
-      <line x1="70" y1="358" x2="70" y2="418" stroke="#04A634" stroke-width="2" marker-end="url(#fa)"/>
-      <line x1="130" y1="358" x2="230" y2="418" stroke="#FBA600" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#fa)"/>
+        <!-- Две ветки от занятий -->
+        <div style="position:relative;width:340px;height:32px;">
+          <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:2px;height:10px;background:#04A634;"></div>
+          <div style="position:absolute;top:10px;left:calc(50% - 100px);width:200px;height:2px;background:#888;"></div>
+          <div style="position:absolute;top:10px;left:calc(50% - 100px);width:2px;height:22px;background:#04A634;"></div>
+          <div style="position:absolute;top:10px;left:calc(50% + 100px);width:2px;height:22px;background:#BA7517;"></div>
+          <div style="position:absolute;bottom:0;left:calc(50% - 104px);border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #04A634;"></div>
+          <div style="position:absolute;bottom:0;left:calc(50% + 96px);border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #BA7517;"></div>
+        </div>
 
-      <!-- Конс бесплатно -->
-      <rect x="20" y="418" width="160" height="52" rx="10" fill="#EAF3DE" stroke="#04A634" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="100" y="437" text-anchor="middle" dominant-baseline="central" fill="#27500A">Конс. бесплатно</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="100" y="456" text-anchor="middle" dominant-baseline="central" fill="#3B6D11">специалисты ЦЛП</text>
+        <div style="display:flex;gap:16px;width:340px;">
+          <div style="flex:1;background:#EAF3DE;border:1.5px solid #04A634;color:#27500A;border-radius:10px;padding:10px 12px;text-align:center;font-size:12px;font-weight:700;">
+            Консультации
+            <div style="font-size:11px;font-weight:400;margin-top:2px;">со специалистами ЦЛП и врачами</div>
+          </div>
+          <div style="flex:1;background:#FAEEDA;border:1.5px solid #BA7517;color:#633806;border-radius:10px;padding:10px 12px;text-align:center;font-size:12px;font-weight:700;">
+            Платное тестирование
+            <div style="font-size:11px;font-weight:400;margin-top:2px;">АДОС и другие</div>
+          </div>
+        </div>
 
-      <!-- Платно АДОС -->
-      <rect x="190" y="418" width="160" height="52" rx="10" fill="#FFF8E0" stroke="#FBA600" stroke-width="1"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="270" y="437" text-anchor="middle" dominant-baseline="central" fill="#92400E">Платно</text>
-      <text font-family="Montserrat,sans-serif" font-size="11" x="270" y="456" text-anchor="middle" dominant-baseline="central" fill="#B45309">АДОС и тестирования</text>
+      </div>
 
-      <!-- ===================== ВЫВОД ===================== -->
-      <rect x="20" y="496" width="660" height="60" rx="14" fill="#FFF8E0" stroke="#FBA600" stroke-width="1.5"/>
-      <text font-family="Montserrat,sans-serif" font-size="13" font-weight="700" x="350" y="516" text-anchor="middle" dominant-baseline="central" fill="#92400E">Главный вывод</text>
-      <text font-family="Montserrat,sans-serif" font-size="12" x="350" y="538" text-anchor="middle" dominant-baseline="central" fill="#B45309">Рост числа ПП возможен только при расширении групп — иначе растёт лист ожидания</text>
-    </svg>
-  </div>
+      <!-- РАЗДЕЛИТЕЛЬ -->
+      <div style="width:1px;background:#e0e0e0;min-height:560px;margin-top:10px;"></div>
 
-  <!-- Легенда -->
-  <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;font-size:13px;">
-    <div style="display:flex;align-items:center;gap:6px;"><div style="width:12px;height:12px;border-radius:3px;background:#C7E9ED;border:1px solid #019BAB;flex-shrink:0;"></div><span style="color:var(--ink2);">Бесплатно</span></div>
-    <div style="display:flex;align-items:center;gap:6px;"><div style="width:12px;height:12px;border-radius:3px;background:#FBEAF0;border:1px solid #E5004F;flex-shrink:0;"></div><span style="color:var(--ink2);">Платно</span></div>
-    <div style="display:flex;align-items:center;gap:6px;"><div style="width:12px;height:12px;border-radius:3px;background:#EAF3DE;border:1px solid #04A634;flex-shrink:0;"></div><span style="color:var(--ink2);">Дети ЦЛП</span></div>
-    <div style="display:flex;align-items:center;gap:6px;"><div style="width:12px;height:12px;border-radius:3px;background:#FCEBEB;border:1.5px solid #E24B4A;flex-shrink:0;"></div><span style="color:var(--ink2);">Узкое место</span></div>
-    <div style="display:flex;align-items:center;gap:6px;"><svg width="32" height="12"><line x1="0" y1="6" x2="26" y2="6" stroke="#888" stroke-width="1.5" stroke-dasharray="4 3"/><polygon points="24,3 30,6 24,9" fill="#888"/></svg><span style="color:var(--ink2);">Необязательный путь</span></div>
+      <!-- ПРАВЫЙ ПУТЬ -->
+      <div style="display:flex;flex-direction:column;align-items:center;min-width:200px;">
+
+        <div style="background:#C7E9ED;border:1.5px solid #019BAB;color:#0C6B78;border-radius:10px;padding:10px 20px;text-align:center;font-size:13px;font-weight:700;">Новый ребёнок</div>
+        <div style="width:2px;height:28px;background:#E5004F;position:relative;"><div style="position:absolute;bottom:-6px;left:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #E5004F;"></div></div>
+
+        <div style="background:#FBEAF0;border:1.5px solid #E5004F;color:#72243E;border-radius:10px;padding:10px 16px;text-align:center;font-size:13px;font-weight:700;max-width:200px;">
+          Приём у врача
+          <div style="font-size:11px;font-weight:400;margin-top:2px;">Новиков, Портнова и др.</div>
+        </div>
+        <div style="width:2px;height:28px;background:#E5004F;position:relative;"><div style="position:absolute;bottom:-6px;left:-4px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #E5004F;"></div></div>
+
+        <div style="background:#FBEAF0;border:1.5px solid #E5004F;color:#72243E;border-radius:10px;padding:10px 16px;text-align:center;font-size:13px;font-weight:700;max-width:200px;">
+          Повторные консультации
+          <div style="font-size:11px;font-weight:400;margin-top:2px;">у того же врача</div>
+        </div>
+
+        <div style="height:32px;"></div>
+
+        <div style="background:#F1EFE8;border:1.5px dashed #888780;color:#444441;border-radius:10px;padding:12px 16px;text-align:center;font-size:12px;font-weight:600;max-width:200px;line-height:1.5;">
+          Право на первичный психолого-педагогический приём — один раз
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;margin:10px 0;color:#019BAB;font-size:11px;">
+          <svg width="50" height="12" style="overflow:visible"><line x1="0" y1="6" x2="38" y2="6" stroke="#019BAB" stroke-width="1.5" stroke-dasharray="4 2"/><polygon points="34,3 42,6 34,9" fill="#019BAB"/></svg>
+          переходит в левый путь
+        </div>
+
+        <div style="height:20px;"></div>
+
+        <div style="background:#FAEEDA;border:1.5px dashed #BA7517;color:#633806;border-radius:10px;padding:10px 16px;text-align:center;font-size:12px;font-weight:700;max-width:200px;">
+          Платное тестирование
+          <div style="font-size:11px;font-weight:400;margin-top:2px;">также доступно</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Легенда -->
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--ink2);">
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:3px;background:#C7E9ED;border:1.5px solid #019BAB;display:inline-block;"></span>Основной путь</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:3px;background:#EAF3DE;border:1.5px solid #04A634;display:inline-block;"></span>Занятия и консультации ЦЛП</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:3px;background:#FBEAF0;border:1.5px solid #E5004F;display:inline-block;"></span>Приём врачей</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:3px;background:#FAEEDA;border:1.5px solid #BA7517;display:inline-block;"></span>Тестирование</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:3px;background:#F1EFE8;border:1.5px dashed #888;display:inline-block;"></span>Промежуточный шаг</span>
+    </div>
+
   </div>
 </div>
 </section>
