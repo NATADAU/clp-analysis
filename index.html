@@ -157,7 +157,7 @@ footer strong{color:rgba(255,255,255,0.7);font-weight:700;}
 <nav>
 <div class="nav-inner">
   <a href="#hero" class="nav-logo">ЦЛП · Анализ 25/26</a>
-  <button class="burger" onclick="toggleMenu()" aria-label="Меню">
+  <button class="burger" onclick="toggleMenu(event)" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="navLinks">
@@ -1750,7 +1750,8 @@ specs.forEach(([n,p,c,t,pd,r,pr])=>{
 </script>
 
 <script>
-function toggleMenu() {
+function toggleMenu(e) {
+  e.stopPropagation();
   const links = document.getElementById('navLinks');
   const btn = document.querySelector('.burger');
   links.classList.toggle('open');
